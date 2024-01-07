@@ -2,8 +2,8 @@ version: '3'
 
 services:
   selenium:               # selenium container
-    # image: selenium/standalone-chrome:latest # docker hubのselenium公式イメージ
-    image:  seleniarm/node-chromium:latest # docker hubのselenium公式イメージ
+    # image: selenium/standalone-chrome:latest # docker hubのselenium公式イメージだが使えないので、下のを使う
+    image: seleniarm/standalone-chromium:latest
     shm_size: 2gb         # ホストとメモリを共有するために設定
     ports:
       - 4444:4444         # selenium sever port
